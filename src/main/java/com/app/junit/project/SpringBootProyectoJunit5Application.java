@@ -7,7 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootProyectoJunit5Application {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SpringBootProyectoJunit5Application.class, args);
+		double salary = 1000;
+		System.out.println(MoneyUtil.format(salary));
 	}
+
+
 
 }

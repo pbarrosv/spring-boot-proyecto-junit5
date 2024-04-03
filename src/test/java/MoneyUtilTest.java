@@ -9,4 +9,22 @@ public class MoneyUtilTest {
         String money = MoneyUtil.format(1000);
         Assertions.assertEquals("$1000.00",money);
     }
+
+    @Test
+    public void negativemoneyTest(){
+        String money = MoneyUtil.format(-1000);
+        Assertions.assertEquals("-$1000.00",money);
+    }
+
+    @Test
+    public void euroMoneyTest(){
+        String money = MoneyUtil.format(-1000,"€");
+        Assertions.assertEquals("-€1000.00",money);
+    }
+
+    @Test
+    public void nullExceptioneuroMoneyTest(){
+        String money = MoneyUtil.format(-1000,"€");
+        Assertions.assertEquals("-€1000.00",money);
+    }
 }
